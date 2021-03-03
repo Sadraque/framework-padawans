@@ -20,7 +20,7 @@
 			<td th:text="${todo.id}" />
 			<td th:text="${todo.userId}" />
 			<td th:text="${todo.title}" />
-			<td th:text="${todo.completed}" />
+			<td th:text="${todo.completed ? '✔' : '❌'}">
 		</tr>
 		</tbody>
 	</table>
