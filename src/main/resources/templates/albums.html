@@ -10,8 +10,8 @@
 		<thead class="table-dark">
 		<tr>
 			<th scope="col">#</th>
-			<th scope="col">User</th>
-			<th scope="col">Title</th>
+			<th scope="col">Usuário</th>
+			<th scope="col">Titulo</th>
 		</tr>
 		</thead>
 		<tbody>
@@ -22,5 +22,18 @@
 		</tr>
 		</tbody>
 	</table>
+	<p align="center"><caption th:text="'Total de registros: ' + ${albumsNumber}" style="text-align: center" /></p>
+	<nav aria-label="Page navigation" style="margin-top: -0rem;">
+		<ul class="pagination justify-content-center">
+	    	<li class="page-item disabled">
+		    	<li class="page-item"><a class="page-link" th:href="${path} +'1'">1</a></li>
+			    <li class="page-item"><a class="page-link" th:href="${path} +'2'">2</a></li>
+			    <li class="page-item"><a class="page-link" th:href="${path} +'3'">3</a></li>
+			    <li class="page-item"><a class="page-link" th:href="${path} +'4'">4</a></li>
+			    <li class="page-item"><a class="page-link" th:href="${path} +'5'">5</a></li>
+			    <li class="page-item"><a class="page-link" th:href="${path}">TODAS</a></li>
+		    </li>
+		</ul>
+	</nav>		
 </body>
 </html>

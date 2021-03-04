@@ -5,15 +5,16 @@
 	
 	<meta charset="utf-8">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">	
 </head>
 <body>
-	<table class="table table-striped">
+	<table class="table table-bordered table-striped table-sm">
 		<thead class="table-dark">
 		<tr>
 			<th scope="col">#</th>
-			<th scope="col">User</th>
-			<th scope="col">Title</th>
-			<th scope="col">Body</th>
+			<th scope="col">Usuário</th>
+			<th scope="col">Titulo</th>
+			<th scope="col">Corpo</th>
 		</tr>
 		</thead>
 		<tbody>
@@ -22,8 +23,22 @@
 			<td th:text="${post.userId}" />
 			<td th:text="${post.title}" />
 			<td th:text="${post.body}" />
+			
 		</tr>
 		</tbody>
 	</table>
+	<p align="center"><caption th:text="'Total de registros: ' + ${postsNumber}" style="text-align: center" /></p>
+	<nav aria-label="Page navigation" style="margin-top: -0rem;">
+		<ul class="pagination justify-content-center">
+	    	<li class="page-item disabled">
+		    	<li class="page-item"><a class="page-link" th:href="${path} +'1'">1</a></li>
+			    <li class="page-item"><a class="page-link" th:href="${path} +'2'">2</a></li>
+			    <li class="page-item"><a class="page-link" th:href="${path} +'3'">3</a></li>
+			    <li class="page-item"><a class="page-link" th:href="${path} +'4'">4</a></li>
+			    <li class="page-item"><a class="page-link" th:href="${path} +'5'">5</a></li>
+			    <li class="page-item"><a class="page-link" th:href="${path}">TODAS</a></li>
+		    </li>
+		</ul>
+	</nav>
 </body>
 </html>

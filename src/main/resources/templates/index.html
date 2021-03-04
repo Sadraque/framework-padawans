@@ -16,20 +16,20 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="bs-example">
-		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark" style="font-size: 28px;">
+	<div class="menu">
+		<nav class="navbar navbar-expand-lg navbar navbar-dark" style="font-size: 28px; background-color: #5f3473;">
 			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse1">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarCollapse1">
 				<div class="navbar-nav">
-					<a href="/posts" class="nav-item nav-link" target="iframe_content">Posts</a>
-					<a href="/albums" class="nav-item nav-link" target="iframe_content">Albums</a>
-					<a href="/todos" class="nav-item nav-link" target="iframe_content">To-dos</a>
+					<a href="/posts/1" class="nav-item nav-link" target="iframe_content">Postagens</a>
+					<a href="/albums/1" class="nav-item nav-link" target="iframe_content">Albuns</a>
+					<a href="/todos/1" class="nav-item nav-link" target="iframe_content">To-dos</a>
 				</div>
 			</div>
 		</nav>
-		<iframe class="content" src="/posts" name="iframe_content" title=""></iframe>
+		<iframe class="content" id="content" src="/posts/1" name="iframe_content"></iframe>
 	</div>
 </body>
 </html>

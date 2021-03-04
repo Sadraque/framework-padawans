@@ -22,25 +22,33 @@ public class PostController {
 	@Autowired
 	PostService postService;
 
-	private int pageSize = 5;
+	private final int pageNumber = 5;
+	private int pageSize;
 	
 	@RequestMapping("/posts")
 	public String allPosts(Model model) {
 		model.addAttribute("pageNumber", postService.getPosts().size() / pageSize);
 		model.addAttribute("posts", postService.getPosts());
+		model.addAttribute("postsNumber", postService.getPosts().size());
+		model.addAttribute("path", "http://localhost:8080/posts/");		
 
 		return "posts.html";
 	}
 	
 	@RequestMapping("/posts/{page}")
 	public String postsByPage(Model model, @PathVariable("page") int pagina) {
+		pageSize = postService.getPosts().size() / pageNumber;
+		
 		int fromIndex = (pagina * pageSize) - pageSize; 
 		int toIndex = fromIndex + (pageSize);
 		
 		List<Post> posts = postService.getPosts().subList(fromIndex, toIndex);
-		System.out.println("Numero = " +posts.size());		
+
 		model.addAttribute("posts", posts);
+		model.addAttribute("postsNumber", postService.getPosts().size());
+		model.addAttribute("path", "http://localhost:8080/posts/");
 
 		return "posts.html";
 	}
+
 }

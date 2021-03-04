@@ -1,14 +1,26 @@
-.bs-example {
+.menu {
 	margin: 0px;
 }
 
 .navbar {
 	margin-bottom: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	display: block;
+	text-align: center;
 }
 
 .content {
 	margin-top: -1rem;
 	border: none;
 	width: 100%;
-	height: 88.2vh;
+	height: 88vh;
+}
+
+.content_pages {
+	margin-top: -0.1rem;
+	border: none;
+	width: 100%;
+	height: 6vh;
 }
